@@ -20,7 +20,7 @@ function handleClick(ramen) {
     `
 }
 
-const addSubmitListener = () => {
+function addSubmitListener() {
   // Add code
   let plusRamen = document.getElementById("new-ramen")
   plusRamen.addEventListener("submit", (e) => {
@@ -30,7 +30,7 @@ const addSubmitListener = () => {
     const freshRamen = {
       name:newRamen.get("name"),
       restaurant:newRamen.get("restaurant"),
-      image:newRamen.get("image"),
+      image_url:newRamen.get("image"),
       rating:newRamen.get("rating"),
       comment:newRamen.get("comment")
     }
@@ -43,10 +43,11 @@ const addSubmitListener = () => {
     })
     .then(resp => resp.json())
     .then(data => {
-      console.log(data)
+      alert(`${data.name} created successfully`)
     })
     .catch(error => console.log(error))
   })
+  let ramenMenu = document.getElementById("ramen-menu")
 }
 
 function displayRamens(ramen) {
