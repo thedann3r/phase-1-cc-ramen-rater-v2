@@ -30,7 +30,7 @@ function addSubmitListener() {
     const freshRamen = {
       name:newRamen.get("name"),
       restaurant:newRamen.get("restaurant"),
-      image_url:newRamen.get("image"),
+      image:newRamen.get("image"),
       rating:newRamen.get("rating"),
       comment:newRamen.get("comment")
     }
@@ -68,6 +68,7 @@ function displayRamens(ramen) {
 const main = () => {
   // Invoke displayRamens here
   // Invoke addSubmitListener here
+  addSubmitListener()
 }
 
 main()
